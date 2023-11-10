@@ -1,6 +1,6 @@
 import { Book, CreateBook } from "../protocols/book";
 import { CreateReview } from "../protocols/review";
-import prisma from "database/database";
+import prisma from "../database/database";
 
 export async function getBooks() {
   const books = await prisma.books.findMany();
